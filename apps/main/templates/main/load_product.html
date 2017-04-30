@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '../static/CSS/load_product.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Martha's Home Page</title>
+
+  </head>
+
+  <body>
+  <div class="wrapper">
+
+
+    <div class="header">
+      <img src="../static/img/boutique_img.jpg" alt="Could Not Load Image" width=500px height=100px;>
+    </div><!--
+    --><nav class="navbar">
+      <ul>
+        <li class = "nav_item_first"><a href="#">Products</a></li>
+        <li class = "nav_item"><a href="#">Custom Order</a></li>
+        <li class = "nav_item"><a href="#">Contact</a></li>
+        <li class = "nav_item"><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <h2 class="product_name">{{product.name}}</h2>
+    <h3 class="product_description">{{product.description}}</h3>
+    <h4 class="price"> ${{product.price}}</h4>
+    <img class="product_image" src="/{{product.img}}" alt="Could Not Load Image" height="500px" width="500px;">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="{{product.paypal}}">
+<input class="paypal" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+  </body>
+</html>

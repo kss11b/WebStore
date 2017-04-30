@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '../static/CSS/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Martha's Home Page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <img src="static/img/boutique_img.jpg" alt="Could Not Load Image" width=500px height=100px;>
+      </div><!--
+      --><nav class="navbar">
+        <ul>
+          <li class = "nav_item_first"><a href="#">Products</a></li>
+          <li class = "nav_item"><a href="#">Custom Order</a></li>
+          <li class = "nav_item"><a href="#">Contact</a></li>
+          <li class = "nav_item"><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div class="top_image">
+      </div>
+      <div class="box_container">
+        <div class="featured_box">
+          <img src="static/img/featured_product1.jpg" alt="Could Not Load Image" height="300" width="300">
+          <p>Towel with Design</p>
+          <span><a href="/load_product/1">Price $25</a></span>
+        </div>
+        <div class="featured_box">
+          <img src="static/img/featured_product2.jpg" alt="Could Not Load Image" height="300" width="300">
+          <p>Personalized Tumbler</p>
+          <span><a href="load_product/2">Price $30</a></span>
+        </div>
+        <div class="featured_box">
+          <img src="static/img/featured_product3.jpg" alt="Could Not Load Image" height="300" width="300">
+          <p>Custom Baby Bib</p>
+          <span><a href="load_product/3">Price $40</a></span>
+        </div>
+
+      </div>
+
+
+    </div>
+  </body>
+</html>
